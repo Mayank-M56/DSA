@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+    
+    cout<<"data modifiers with their size on the based on data type."<< endl;
+    
+    cout<< "for int = "<< sizeof(int)<< endl; //size of int is  4
+    cout<< "for long int = "<< sizeof(long int)<< endl; // now size become =<4(8)
+    cout<< "for long long int = "<< sizeof(long long int)<< endl; // now size become =<8(16), in window only.
+    cout<< "for short int = "<< sizeof(short int)<< endl; //now size become =>4(2)
+    cout<< "for signed int = "<< sizeof(signed int)<< endl; //signed int = int, by-default. stores +ve or -ve value.
+    cout<< "for unsigned int = "<< sizeof(unsigned int)<< endl; //now -ve value cannot store, only +ve.
+    
+    return 0;
+}
