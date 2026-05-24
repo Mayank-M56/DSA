@@ -1,0 +1,48 @@
+/*
+VECTOR
+=same as array but with some extra features.
+=it resizes itself when capacity is fulled while array is fixed.
+=it uses heap(dynamic memory) while array uses stack.
+=when capacity fulled, may relocate itself automatically with double size.
+*/
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main() {
+    
+    vector<int> vec = {10}; //size is 1 and "vec" is a variable.
+    
+    cout<< "First item = "<< vec.front() << endl; //".front()" gives first value of vector. although we can use "vec[0]".
+    cout<< "Size = " << vec.size()<< endl;
+    cout<< "Capacity = " << vec.capacity() << endl; //".capacity()" gives alloted maximum value could store, if capacity fulled then re-allocation of vector with double capacity.
+    cout<< "Last item = "<< vec.back() << endl; //".back()" gives last item of the vector.
+    
+    vec.push_back(20); //20 added in last and size increased.
+    
+    cout<< "\nLast item after push back = "<< vec.back() << endl;
+    cout<< "Size after push back = " << vec.size()<< endl;
+    cout<< "Capacity after push back = " << vec.capacity() << endl;
+    
+    vec.push_back(30);
+    vec.push_back(40);
+    vec.push_back(50);
+    
+    cout<< "\nLast item after push back = "<< vec.back() << endl;
+    cout<< "Size after push back = " << vec.size()<< endl;
+    cout<< "Capacity after push back = " << vec.capacity() << endl;
+    
+    vec.pop_back(); //last item deleted.
+    vec.pop_back();
+    vec.pop_back();
+    
+    cout<< "\nSize after pop back = " << vec.size() << endl;
+    cout<< "Last item after pop back = "<< vec.back() << endl;
+    
+    vector<char> ch = {'a', 'b', 'c', 'd', 'e'};
+    cout<< "\nAt 3rd position = "<< ch[3]<< endl;
+    cout<< "At 3rd position = "<< ch.at(3) << endl; //".at()" gives value based on given index.
+    
+    return 0;
+}
