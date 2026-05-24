@@ -1,0 +1,28 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+//Iterator = same as normal loop function but it accesses address.
+
+int main() {
+    vector<int> list = {10, 20, 30, 40, 50, 60};
+    
+    cout << "Increasing Order." << endl;
+    vector<int>::iterator it; //forward iterator, where "it" is a variable.
+    for(it = list.begin(); it != list.end(); it++) { //.end() tells (n+1)th index.
+        cout << *(it) << "\t"; //need to dereference iterator to get value stored at that location.
+    }
+    
+    cout << "\n\nDecreasing Order." << endl;
+    vector<int>::reverse_iterator rit; //backward iterator.
+    for(rit = list.rbegin(); rit != list.rend(); rit++) { //function begins with "r" to indicates iterator is reverse.
+        cout << *(rit) << "\t";
+    }
+    
+    cout << "\n\nDecreasing Order using \"auto\"" << endl;
+    for(auto ait = list.rbegin(); ait != list.rend(); ait++) { //"auto" tells to compiler about iterator without initializing them.
+        cout << *(ait) << "\t";
+    }
+    
+    return 0;
+}
