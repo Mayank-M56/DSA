@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "5 & 10 = " << (5 & 10) << endl; //For Bitwise &, Both bits must be true otherwise returns False. Thus 5 & 10 => 0101 & 1010 = 0000.
+
+    cout << "5 | 10 = " << (5 | 10) << endl; //For Bitwise |, Atleast of the bit must be true. Thus 5 | 10 => 0101 | 1010 = 1111 => 15.
+
+    cout << "8 ^ 3 = " << (8 ^ 3) << endl; //For Bitwise ^, Both bit must be different otherwise returns False. Thus 8 ^ 3 => 1000 | 0011 = 1011 => 11.
+
+    cout << "10 << 2 = " << (10 << 2) << endl; //Left shift Operator shifts bit by value mentioned on RHS. 10 << 2 => 001010 << 2 = 101000(40).
+    // Left Shift, if a<<b then, result = (a*(2^b))
+
+    cout << "10 >> 1 = " << (10 >> 1) << endl; //Right shift Operator shifts bit by value mentioned on RHS. 10 >> 1 => 1010 >> 1 = 0101(5).
+    // Right Shift, if a>>b then result = (a/(2^b))
+    return 0;
+}
