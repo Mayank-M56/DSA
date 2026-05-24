@@ -1,0 +1,41 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+int main() {
+    vector<int> vec2(9, -1); //another way to intialize vector.
+    
+    for(int val : vec2) { //here "val" is value of "vec2" element.
+        cout << val << "\t";
+    }
+    
+    cout << "\n\n";
+    vector<int> vec3;
+    
+    for(int i = 0; i < 10; i++) {
+        vec3.push_back(i*i);
+        cout << vec3.at(i) << "\t";
+    }
+    
+    //Below functions have TC : O[n]. 
+    cout << endl;
+    vec3.erase(vec3.begin()+3); //delete element, but .begin() is must to use to tell the index.
+    vec3.insert(vec3.begin()+3, 100); //insert element between the vector, 100 will insert.
+    
+    for(int value : vec3) {
+        cout << value << "\t";
+    }
+    
+    cout << "\n";
+    vec3.erase(vec3.begin()+2, vec3.begin()+5); //massive element fired, +2 is included but +5 is excluded.
+    
+    for(int value : vec3) {
+        cout << value << "\t";
+    }
+    
+    vec3.clear(); // Erase all element, size becomes 0 but capacity remains same.
+    
+    cout << "\nEmpty? : " << vec3.empty(); //.empty() tells vector status, 1 for empty and 0 for not empty.
+    
+    return 0;
+}
