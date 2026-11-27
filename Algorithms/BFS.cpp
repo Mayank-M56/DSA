@@ -43,7 +43,7 @@ void BFS(int start, vector<vector<int>>& adj, int size) {
                 visited[neighbor] = true; //New Vertex found and marked visited.
                 q.push(neighbor); //Store in queue and will pop() when it about to expand its connection.
             }
-        //Because queue keep getting new vertex then they'll expand when front one will "pop()". 
+        //Because queue keep getting new vertex and they'll expand further when front one will "pop()". 
         }
     }
 }
